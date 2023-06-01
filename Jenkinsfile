@@ -3,13 +3,13 @@ pipeline{
   
   stages{
     stage('build'){
-      step{
+      steps{
         sh 'npm install'
       }
     }
     
     stage('source-code-import'){
-      step{
+      steps{
         git branch: 'main', changelog: false, poll: false, url: 'https://github.com/akshit4/project_syncfusion_dashboard'
       }
     }
